@@ -1,0 +1,243 @@
+actor Demonizer_EviCompat : DemonizerPowerup replaces invulsphere {}
+
+actor SGDAstralCaco : AstralCaco replaces AstralCaco
+{
+	PainChance "Fire", 200
+	PainChance "HolyWater", 255
+	
+	States
+	{
+	Pain.Fire:
+		KEEN H 3 A_SetTranslation("CharredTrans")
+		KEEN I 3 A_Pain
+		goto See
+	Pain.HolyWater:
+		KEEN H 3 A_SetTranslation("HolyWaterTrans")
+		KEEN I 3 A_Pain
+		goto See
+	Death:
+		KEEN J 8 A_GiveToTarget("FinisherToken",40)
+		KEEN K 8 A_Scream
+		KEEN LMNO 8 
+		KEEN P 8 
+		KEEN Q 8 A_Fall
+		KEEN R 8 
+		KEEN S -1 
+		Stop
+	Death.Fire:
+		KEEN J 8
+		{
+			A_GiveToTarget("FinisherToken",40);
+			A_SetTranslation("CharredTrans");
+		}
+		KEEN K 8 A_Scream
+		KEEN LMNO 8 
+		KEEN P 8 
+		KEEN Q 8 A_Fall
+		KEEN R 8 
+		KEEN S -1 
+		Stop
+	Death.HolyWater:
+		KEEN J 8
+		{
+			A_GiveToTarget("FinisherToken",35);
+			A_SetTranslation("HolyWaterTrans");
+		}
+		KEEN K 8 A_Scream
+		KEEN LMNO 8 
+		KEEN P 8 
+		KEEN Q 8 A_Fall
+		KEEN R 8 
+		KEEN S -1 
+		Stop
+	Raise:
+		KEEN S 5 A_SetTranslation("ResetTrans")
+		KEEN QPOMLK 5 
+		goto See
+	}
+}
+
+actor SGDAnnihilator : Annihilator replaces Annihilator
+{
+	PainChance "Fire", 200
+	PainChance "HolyWater", 255
+	
+	States
+	{
+	Pain.Fire:
+		BOSS J 3 A_SetTranslation("CharredTrans")
+		BOSS J 3 A_Pain
+		goto See
+	Pain.HolyWater:
+		BOSS J 3 A_SetTranslation("HolyWaterTrans")
+		BOSS J 3 A_Pain
+		goto See
+	Death:
+		BOSS K 8 A_GiveToTarget("FinisherToken",65)
+		BOSS L 8 A_Scream
+		BOSS M 8 A_Fall
+		BOSS NOPQ 8 
+		BOSS R -1 A_KeenDie
+		stop
+	Death.Fire:
+		BOSS K 8
+		{
+			A_GiveToTarget("FinisherToken",65);
+			A_SetTranslation("CharredTrans");
+		}
+		BOSS L 8 A_Scream
+		BOSS M 8 A_Fall
+		BOSS NOPQ 8 
+		BOSS R -1 A_KeenDie
+		stop
+	Death.HolyWater:
+		BOSS K 8
+		{
+			A_GiveToTarget("FinisherToken",65);
+			A_SetTranslation("HolyWaterTrans");
+		}
+		BOSS L 8 A_Scream
+		BOSS M 8 A_Fall
+		BOSS NOPQ 8 
+		BOSS R -1 A_KeenDie
+		stop
+	Raise:
+		BOSS R 5 A_SetTranslation("ResetTrans")
+		BOSS QPONMLK 5 
+		goto See
+	}
+}
+
+actor SGDFormerCaptain : FormerCaptain replaces FormerCaptain
+{
+	PainChance "Fire", 200
+	PainChance "HolyWater", 255
+	
+	States
+	{
+	Pain.Fire:
+		SSWV G 3 A_SetTranslation("CharredTrans")
+		SSWV G 3 A_Pain
+		goto See
+	Pain.HolyWater:
+		SSWV G 3 A_SetTranslation("HolyWaterTrans")
+		SSWV G 3 A_Pain
+		goto See
+	Death:
+		SSWV H 5 A_GiveToTarget("FinisherToken",12) 
+		SSWV I 5 A_Scream
+		SSWV J 5 A_Fall
+		SSWV KLM 5 
+		SSWV N -1 
+		stop
+	XDeath:
+		SSWV O 5 A_GiveToTarget("FinisherToken",12)
+		SSWV P 5 A_XScream
+		SSWV Q 5 A_Fall
+		SSWV RST 5 
+		SSWV U -1 
+		stop
+	Death.Fire:
+		SSWV H 5
+		{
+			A_GiveToTarget("FinisherToken",12);
+			A_SetTranslation("CharredTrans");
+		}
+		SSWV I 5 A_Scream
+		SSWV J 5 A_Fall
+		SSWV KLM 5 
+		SSWV N -1 
+		stop
+	XDeath.Fire:
+		SSWV O 5
+		{
+			A_GiveToTarget("FinisherToken",12);
+			A_SetTranslation("CharredTrans");
+		}
+		SSWV P 5 A_XScream
+		SSWV Q 5 A_Fall
+		SSWV RST 5 
+		SSWV U -1 
+		stop
+	Death.HolyWater:
+		SSWV H 5
+		{
+			A_GiveToTarget("FinisherToken",12);
+			A_SetTranslation("HolyWaterTrans");
+		}
+		SSWV I 5 A_Scream
+		SSWV J 5 A_Fall
+		SSWV KLM 5 
+		SSWV N -1 
+		stop
+	XDeath.HolyWater:
+		SSWV O 5
+		{
+			A_GiveToTarget("FinisherToken",12);
+			A_SetTranslation("HolyWaterTrans");
+		}
+		SSWV P 5 A_XScream
+		SSWV Q 5 A_Fall
+		SSWV RST 5 
+		SSWV U -1 
+		stop
+	Raise:
+		SSWV N 5 A_SetTranslation("ResetTrans")
+		SSWV MLKJIH 5 
+		goto See
+	}
+}
+
+actor SGDNightmareDemon : NightmareDemon replaces NightmareDemon
+{
+	PainChance "Fire", 200
+	PainChance "HolyWater", 255
+	
+	States
+	{
+	Pain.Fire:
+		DOGS H 2 A_SetTranslation("CharredTrans")
+		DOGS H 2 A_Pain
+		goto See
+	Pain.HolyWater:
+		DOGS H 2 A_SetTranslation("HolyWaterTrans")
+		DOGS H 2 A_Pain
+		goto See
+	Death:
+		DOGS I 8 A_GiveToTarget("FinisherToken",25)
+		DOGS J 8 A_Scream
+		DOGS K 4
+		DOGS L 4 A_Fall
+		DOGS M 4
+		DOGS N -1
+		stop
+	Death.Fire:
+		DOGS I 8
+		{
+			A_GiveToTarget("FinisherToken",25);
+			A_SetTranslation("CharredTrans");
+		}
+		DOGS J 8 A_Scream
+		DOGS K 4
+		DOGS L 4 A_Fall
+		DOGS M 4
+		DOGS N -1
+		stop
+	Death.HolyWater:
+		DOGS I 8
+		{
+			A_GiveToTarget("FinisherToken",25);
+			A_SetTranslation("HolyWaterTrans");
+		}
+		DOGS J 8 A_Scream
+		DOGS K 4
+		DOGS L 4 A_Fall
+		DOGS M 4
+		DOGS N -1
+		stop
+	Raise:
+		DOGS N 5 A_SetTranslation("ResetTrans")
+		DOGS MLKJI 5
+		goto See
+	}
+}

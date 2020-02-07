@@ -1,0 +1,223 @@
+actor SGDNightmareImp : NightmareImp replaces NightmareImp
+{
+	PainChance "HolyWater", 255
+	PainChance "Fire", 200
+	PainChance "Sploder", 200
+	
+	States
+	{
+	Death:
+		TROO I 8 A_GiveToTarget("FinisherToken",12)
+		TROO J 8 A_Scream
+		TROO K 6
+		TROO L 6 A_NoBlocking
+		TROO M -1
+		Stop
+	Death.HolyWater:
+		TROO I 8
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("FinisherToken",12);
+		}
+		TROO J 8 A_Scream
+		TROO K 6
+		TROO L 6 A_NoBlocking
+		TROO M -1
+		Stop
+	Death.Fire:
+		TROO I 8
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("FinisherToken",12);
+		}
+		TROO J 8 A_Scream
+		TROO K 6
+		TROO L 6 A_NoBlocking
+		TROO M -1
+		Stop
+	XDeath:
+		TROO N 5 A_GiveToTarget("FinisherToken",12)
+		TROO O 5 A_XScream
+		TROO P 5
+		TROO Q 5 A_NoBlocking
+		TROO RST 5
+		TROO U -1
+		Stop
+	XDeath.HolyWater:
+		TROO N 5
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("FinisherToken",12);
+		}
+		TROO O 5 A_XScream
+		TROO P 5
+		TROO Q 5 A_NoBlocking
+		TROO RST 5
+		TROO U -1
+		Stop
+	XDeath.Fire:
+		TROO N 5
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("FinisherToken",12);
+		}
+		TROO O 5 A_XScream
+		TROO P 5
+		TROO Q 5 A_NoBlocking
+		TROO RST 5
+		TROO U -1
+		Stop
+	Death.Sploder:
+	XDeath.Sploder:
+		TROO H 2 A_Pain
+		TROO HHHHHHHHHH 5
+		TROO N 5
+		{
+			A_GiveToTarget("FinisherToken",12);
+			A_SpawnItemEx("Explosion",0,0,35);
+		}
+		TROO O 5
+		{
+			A_XScream();
+			A_Explode(666,192,XF_NOTMISSILE);
+		}
+		TROO P 5
+		TROO Q 5 A_NoBlocking
+		TROO RST 5
+		TROO U -1
+		Stop
+	}
+}
+
+actor SGDNightmareCaco : NightmareCacodemon replaces NightmareCacodemon
+{
+	PainChance "HolyWater", 255
+	PainChance "Fire", 200
+	PainChance "Sploder", 200
+	
+	States
+	{
+	Death:
+		HEAD G 8 A_GiveToTarget("FinisherToken",25)
+		HEAD H 8 A_Scream
+		HEAD I 8
+		HEAD J 8
+		HEAD K 8 A_NoBlocking
+		HEAD L -1 A_SetFloorClip
+		Stop
+	Death.HolyWater:
+		HEAD G 8
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("FinisherToken",25);
+		}
+		HEAD H 8 A_Scream
+		HEAD I 8
+		HEAD J 8
+		HEAD K 8 A_NoBlocking
+		HEAD L -1 A_SetFloorClip
+		Stop
+	Death.Fire:
+		HEAD G 8
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("FinisherToken",25);
+		}
+		HEAD H 8 A_Scream
+		HEAD I 8
+		HEAD J 8
+		HEAD K 8 A_NoBlocking
+		HEAD L -1 A_SetFloorClip
+		Stop
+	Death.Sploder:
+		HEAD E 3 A_Pain
+		HEAD EEEEEEEEEE 5
+		HEAD G 8
+		{
+			A_GiveToTarget("FinisherToken",25);
+			A_SpawnItemEx("Explosion",0,0,35);
+		}
+		HEAD H 8
+		{
+			A_Scream();
+			A_Explode(666,192,XF_NOTMISSILE);
+		}
+		HEAD I 8
+		HEAD J 8
+		HEAD K 8 A_NoBlocking
+		HEAD L -1 A_SetFloorClip
+		Stop
+	}
+}
+
+actor SGDCyberdemon_D64D2Compat : D64D2Cyberdemon replaces D64D2Cyberdemon
+{
+	PainChance "HolyWater", 255
+	PainChance "Fire", 40
+	PainChance "Sploder", 200
+	
+	States
+	{
+	Death:
+		CYBR H 10
+		{
+			A_GiveToTarget("CyberdemonsKilled");
+			A_GiveToTarget("FinisherToken",100);
+		}
+		CYBR I 10 A_Scream
+		CYBR JKL 10
+		CYBR M 10 A_NoBlocking
+		CYBR NO 10
+		CYBR P 30
+		CYBR P -1 A_KeenDie
+		Stop
+	Death.HolyWater:
+		CYBR H 10
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("CyberdemonsKilled");
+			A_GiveToTarget("FinisherToken",100);
+		}
+		CYBR I 10 A_Scream
+		CYBR JKL 10
+		CYBR M 10 A_NoBlocking
+		CYBR NO 10
+		CYBR P 30
+		CYBR P -1 A_KeenDie
+		Stop
+	Death.Fire:
+		CYBR H 10
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("CyberdemonsKilled");
+			A_GiveToTarget("FinisherToken",100);
+		}
+		CYBR I 10 A_Scream
+		CYBR JKL 10
+		CYBR M 10 A_NoBlocking
+		CYBR NO 10
+		CYBR P 30
+		CYBR P -1 A_KeenDie
+		Stop
+	Death.Sploder:
+		CYBR G 2 A_Pain
+		CYBR GGGGGGGGGG 5
+		CYBR H 10
+		{
+			A_GiveToTarget("CyberdemonsKilled");
+			A_GiveToTarget("FinisherToken",100);
+			A_SpawnItemEx("Explosion",0,0,35);
+		}
+		CYBR I 10
+		{
+			A_Scream();
+			A_Explode(666,192,XF_NOTMISSILE);
+		}
+		CYBR JKL 10
+		CYBR M 10 A_NoBlocking
+		CYBR NO 10
+		CYBR P 30
+		CYBR P -1 A_KeenDie
+		Stop
+	}
+}
