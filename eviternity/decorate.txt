@@ -50,6 +50,25 @@ actor SGDAstralCaco : AstralCaco replaces AstralCaco
 		KEEN R 8 
 		KEEN S -1 
 		Stop
+	Death.Sploder:
+		KEEN J 3 A_Pain
+		KEEN JJJJJJJJJJ 5
+		KEEN J 8
+		{
+			A_GiveToTarget("FinisherToken",40);
+			A_SpawnItemEx("Explosion",0,0,35);
+		}
+		KEEN K 8
+		{
+			A_Scream();
+			A_Explode(666,192,XF_NOTMISSILE);
+		}
+		KEEN LMNO 8 
+		KEEN P 8 
+		KEEN Q 8 A_Fall
+		KEEN R 8 
+		KEEN S -1 
+		Stop
 	Raise:
 		KEEN S 5 A_SetTranslation("ResetTrans")
 		KEEN QPOMLK 5 
@@ -97,6 +116,23 @@ actor SGDAnnihilator : Annihilator replaces Annihilator
 			A_SetTranslation("HolyWaterTrans");
 		}
 		BOSS L 8 A_Scream
+		BOSS M 8 A_Fall
+		BOSS NOPQ 8 
+		BOSS R -1 A_KeenDie
+		stop
+	Death.Sploder:
+		BOSS K 3 A_Pain
+		BOSS KKKKKKKKKK 5
+		BOSS K 8
+		{
+			A_GiveToTarget("FinisherToken",65);
+			A_SpawnItemEx("Explosion",0,0,35);
+		}
+		BOSS L 8
+		{
+			A_Scream();
+			A_Explode(666,192,XF_NOTMISSILE);
+		}
 		BOSS M 8 A_Fall
 		BOSS NOPQ 8 
 		BOSS R -1 A_KeenDie
@@ -181,6 +217,24 @@ actor SGDFormerCaptain : FormerCaptain replaces FormerCaptain
 		SSWV RST 5 
 		SSWV U -1 
 		stop
+	Death.Sploder:
+	XDeath.Sploder:
+		SSVW O 3 A_Pain
+		SSVW OOOOOOOOOO 5
+		SSWV O 5
+		{
+			A_GiveToTarget("FinisherToken",12);
+			A_SpawnItemEx("Explosion",0,0,35);
+		}
+		SSWV P 5
+		{
+			A_XScream();
+			A_Explode(666,192,XF_NOTMISSILE);
+		}
+		SSWV Q 5 A_Fall
+		SSWV RST 5 
+		SSWV U -1 
+		stop
 	Raise:
 		SSWV N 5 A_SetTranslation("ResetTrans")
 		SSWV MLKJIH 5 
@@ -230,6 +284,24 @@ actor SGDNightmareDemon : NightmareDemon replaces NightmareDemon
 			A_SetTranslation("HolyWaterTrans");
 		}
 		DOGS J 8 A_Scream
+		DOGS K 4
+		DOGS L 4 A_Fall
+		DOGS M 4
+		DOGS N -1
+		stop
+	Death.Sploder:
+		DOGS I 3 A_Pain
+		DOGS IIIIIIIIII 5
+		DOGS I 8
+		{
+			A_GiveToTarget("FinisherToken",25);
+			A_SpawnItemEx("Explosion",0,0,35);
+		}
+		DOGS J 8
+		{
+			A_Scream();
+			A_Explode(666,192,XF_NOTMISSILE);
+		}
 		DOGS K 4
 		DOGS L 4 A_Fall
 		DOGS M 4
