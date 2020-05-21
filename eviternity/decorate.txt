@@ -1,4 +1,4 @@
-actor Demonizer_EviCompat : DemonizerPowerup replaces invulsphere {}
+// actor Demonizer_EviCompat : DemonizerPowerup replaces invulsphere {}
 
 actor SGDAstralCaco : AstralCaco replaces AstralCaco
 {
