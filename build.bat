@@ -11,14 +11,14 @@ if (%DIR%) == (eviternity) (goto eviternity)
 :d64d2
 cd d64d2
 echo Building patch for D64D2...
-..\tools\7za a -t7z sgd_compat_d64d2.pk3 *.* *
+..\tools\7za a -tzip sgd_compat_d64d2.pk3 *.* *
 move sgd_compat_d64d2.pk3 ../_build/sgd_compat_d64d2.pk3
 goto Done
 
 :eviternity
 cd eviternity
 echo Building patch for Eviternity...
-..\tools\7za a -t7z sgd_compat_eviternity.pk3 *.* *
+..\tools\7za a -tzip sgd_compat_eviternity.pk3 *.* *
 move sgd_compat_eviternity.pk3 ../_build/sgd_compat_eviternity.pk3
 goto Done
 
