@@ -1,0 +1,5 @@
+[enu default]
+
+SGD_FEAT21 = "25 annihilators killed";
+SGD_FEAT24 = "75 annihilators killed";
+SGD_FEAT25 = "100 annihilators killed";
