@@ -15,3 +15,7 @@ The compatibility patches can be generated with the build.bat utility that comes
 ## Load order
 
 Generally, the files should be loaded in the following order: the mapset/mod goes first, SGD goes second, and the compatibility patch goes last. Any complementary mods should go after all of the other files in the load order. Exceptions are possible, however; if so, it'll be noted in the readme file of the appropriate compatibility patch.
+
+## License information
+
+The contents of this repository are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
