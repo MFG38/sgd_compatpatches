@@ -1,8 +1,8 @@
 @echo off
 
 echo SGD Compatibility Patch Generator
-echo by MFG38, (c) 2020
-echo ------------------
+echo by Santtu "MFG38" Pesonen, 2020
+echo ---------------------------------
 set /p DIR="Enter name of directory to zip: " % = %
 
 if (%DIR%) == (d64d2) (goto d64d2)
