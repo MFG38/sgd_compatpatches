@@ -5,21 +5,10 @@ echo by Santtu "MFG38" Pesonen, 2020
 echo ---------------------------------
 set /p DIR="Enter name of directory to zip: " % = %
 
-if (%DIR%) == (d64d2) (goto d64d2)
-if (%DIR%) == (eviternity) (goto eviternity)
-
-:d64d2
-cd d64d2
-echo Building patch for D64D2...
-..\tools\7za a -tzip sgd_compat_d64d2.pk3 *.* *
-move sgd_compat_d64d2.pk3 ../_build/sgd_compat_d64d2.pk3
-goto Done
-
-:eviternity
-cd eviternity
-echo Building patch for Eviternity...
-..\tools\7za a -tzip sgd_compat_eviternity.pk3 *.* *
-move sgd_compat_eviternity.pk3 ../_build/sgd_compat_eviternity.pk3
+cd %DIR%
+echo Building patch for %DIR%...
+..\tools\7za a -tzip sgd_compat_%DIR%.pk3 *.* *
+move sgd_compat_%DIR%.pk3 ../_build/sgd_compat_%DIR%.pk3
 goto Done
 
 :Done
