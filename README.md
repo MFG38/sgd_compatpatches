@@ -10,7 +10,7 @@ This collection currently includes compatibility patches for the following mapse
 
 ## Compiling a patch
 
-The compatibility patches can be generated with the build.bat utility that comes with the download. Extract the contents of the ZIP file to a folder of your choice and double-click on build.bat to run it. The utility will prompt you to enter the name of the folder you wish to build - type the name of the folder and press Enter. If all goes well, a file named sgd_compat_*.pk3 (where * is the name of the folder/patch) should appear in the _build subfolder.
+The compatibility patches can be generated with the build.bat utility that comes with the download. Extract the contents of the ZIP file to a folder of your choice and double-click on build.bat (Windows) or run build.sh (Linux) to run it. The utility will prompt you to enter the name of the folder you wish to build - type the name of the folder and press Enter. If all goes well, a file named sgd_compat_*.pk3 (where * is the name of the folder/patch) should appear in the _build subfolder.
 
 ## Load order
 
