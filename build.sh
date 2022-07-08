@@ -6,6 +6,6 @@ echo ---------------------------------
 echo Enter name of directory to zip
 read DIR
 
-cd {DIR}
+cd "$DIR"
 7za a -tzip sgd_compat_${DIR}.pk3 *
 mv sgd_compat_${DIR}.pk3 ../_build
