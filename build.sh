@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 echo SGD Compatibility Patch Generator
 echo by Santtu "MFG38" Pesonen, 2020
