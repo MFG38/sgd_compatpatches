@@ -3,6 +3,9 @@ actor SGDNightmareImp : NightmareImp replaces NightmareImp
 	PainChance "HolyWater", 255
 	PainChance "Fire", 200
 	PainChance "Sploder", 200
+	PainChance "ArgentBomb", 200
+	PainChance "Sawblade", 255
+	PainChance "ShotgunSlug", 255
 	
 	States
 	{
@@ -94,6 +97,9 @@ actor SGDNightmareCaco : NightmareCacodemon replaces NightmareCacodemon
 	PainChance "HolyWater", 255
 	PainChance "Fire", 200
 	PainChance "Sploder", 200
+	PainChance "ArgentBomb", 200
+	PainChance "Sawblade", 255
+	PainChance "ShotgunSlug", 255
 	
 	States
 	{
@@ -152,9 +158,13 @@ actor SGDNightmareCaco : NightmareCacodemon replaces NightmareCacodemon
 
 actor SGDCyberdemon_D64D2Compat : D64D2Cyberdemon replaces D64D2Cyberdemon
 {
-	PainChance "HolyWater", 255
+	PainChance "HolyWater", 64
 	PainChance "Fire", 40
 	PainChance "Sploder", 200
+	PainChance "ArgentBomb", 200
+	PainChance "Sawblade", 255
+	PainChance "ShotgunSlug", 255
+	DamageFactor "Sawblade", 2.5
 	
 	States
 	{
@@ -206,7 +216,10 @@ actor SGDCyberdemon_D64D2Compat : D64D2Cyberdemon replaces D64D2Cyberdemon
 		{
 			A_GiveToTarget("CyberdemonsKilled");
 			A_GiveToTarget("FinisherToken",100);
-			A_SpawnItemEx("Explosion",0,0,35);
+			A_SpawnItemEx("Explosion",random(-16,16),random(-16,16),random(52,80));
+			A_SpawnItemEx("Explosion",random(-16,16),random(-16,16),random(52,80));
+			A_SpawnItemEx("Explosion",random(-16,16),random(-16,16),random(52,80));
+			A_SpawnItemEx("Explosion",random(-16,16),random(-16,16),random(52,80));
 		}
 		CYBR I 10
 		{
