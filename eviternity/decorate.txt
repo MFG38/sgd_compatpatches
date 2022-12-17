@@ -4,6 +4,10 @@ actor SGDAstralCaco : AstralCaco replaces AstralCaco
 {
 	PainChance "Fire", 200
 	PainChance "HolyWater", 255
+	PainChance "Sploder", 200
+	PainChance "ArgentBomb", 200
+	PainChance "Sawblade", 255
+	PainChance "ShotgunSlug", 255
 	
 	States
 	{
@@ -80,6 +84,10 @@ actor SGDAnnihilator : Annihilator replaces Annihilator
 {
 	PainChance "Fire", 200
 	PainChance "HolyWater", 255
+	PainChance "Sploder", 200
+	PainChance "ArgentBomb", 200
+	PainChance "Sawblade", 255
+	PainChance "ShotgunSlug", 255
 	
 	States
 	{
@@ -148,6 +156,10 @@ actor SGDFormerCaptain : FormerCaptain replaces FormerCaptain
 {
 	PainChance "Fire", 200
 	PainChance "HolyWater", 255
+	PainChance "Sploder", 200
+	PainChance "ArgentBomb", 200
+	PainChance "Sawblade", 255
+	PainChance "ShotgunSlug", 255
 	
 	States
 	{
@@ -246,9 +258,21 @@ actor SGDNightmareDemon : NightmareDemon replaces NightmareDemon
 {
 	PainChance "Fire", 200
 	PainChance "HolyWater", 255
+	PainChance "Sploder", 200
+	PainChance "ArgentBomb", 200
+	PainChance "Sawblade", 255
+	PainChance "ShotgunSlug", 255
+	Speed 12
 	
 	States
 	{
+	See:
+		DOGS AAABBBCCCDDD 1 A_Chase
+		Loop
+	Melee:
+		DOGS EF 5 A_FaceTarget
+		DOGS G 6 A_SargAttack
+		Goto See
 	Pain.Fire:
 		DOGS H 2 A_SetTranslation("CharredTrans")
 		DOGS H 2 A_Pain
